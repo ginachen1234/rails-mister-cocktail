@@ -33,7 +33,7 @@ gem 'simple_form'
 
 gem 'bootstrap-sass'
 
-gem 'simple_form'
+
 
 
 # Use Redis adapter to run Action Cable in production
@@ -65,6 +65,8 @@ group :development do
   gem 'dotenv-rails', groups: [:development, :test]
   gem 'cloudinary', '~> 1.9.1'
   gem 'dotenv-rails', groups: [:development, :test]
+  gem 'carrierwave', '~> 1.2'
+
 
 end
 
