@@ -1,1 +1,12 @@
-// Specific CSS for your home-page
+.header-component .header-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, a {
+    text-decoration: none;
+}
+
