@@ -10,3 +10,10 @@ import 'bootstrap';
 console.log('Hello World from Webpacker')
 
 import '../components/navbar';
+
+import '../components/cards';
+
+import './packs/tiles';
+
+import './packs/jquery.hover3d';
+
