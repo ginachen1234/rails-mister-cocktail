@@ -8,21 +8,7 @@
 <header>
       <div class="navbar">
         <ul class="nav">
-          <li class="item">
-            <a href="#">Home</a>
-          </li>
 
-          <li class="item">
-            <a href="#">Blog</a>
-          </li>
-
-          <li class="item">
-            <a href="#">About</a>
-          </li>
-
-          <li class="item">
-            <a href="#" >Contact</a>
-          </li>
         </ul>
 
         <div class="logo">
@@ -40,6 +26,27 @@
 
 
   <div class="header-container">
+    <div class = header-content>
+    <li class="item">
+          <a class="link link--kukuri" href="#" data-letters="Kukuri">Home</a>
+
+          </li>
+
+          <li class="item">
+            <a class="link link--kukuri" href="#" data-letters="Kukuri">Blog</a>
+
+          </li>
+
+          <li class="item">
+            <a class="link link--kukuri" href="#" data-letters="Kukuri">About</a>
+
+          </li>
+
+          <li class="item">
+            <a class="link link--kukuri" href="#" data-letters="Kukuri">Contact</a>
+
+          </li>
+          </div>
 
     <h1 class = title><b>Best bar in London</b></h1>
     <p>Search for your favourite cocktail</p>
@@ -55,13 +62,13 @@
 <div class="project">
 
   <div class="project__card">
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+
 
     <a href="" class="project__image"><img src="https://d32miag6ta013h.cloudfront.net/master_cocktails/1348/en-ca/small/525x525_roman-cosmo-martini-cocktail.jpg" width=600 height=400 alt=""></a>
 
     <div class="project__detail">
 
-      <h2 class="project__title"><a href="#">Project Name</a></h2>
+      <h2 class="project__title"><a href="#"> <%= link_to cocktail.name, cocktail_path(cocktail) %></a></h2>
 
       <small class="project__category"><a href="#">Photography</a></small>
 
@@ -81,11 +88,7 @@
 
 
 
-<script src="tilt.jquery.js"></script>
-</body>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-<script src="js/jquery.hover3d.js" ></script>
 
 
 </html>
