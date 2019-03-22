@@ -137,8 +137,10 @@ h1+p, p+p {
     opacity: 0;
     transform: translateY(100%);
     transition: 5s 1s $returnEasing;
+    margin-bottom: 10%;
   }
 }
+
 
 .card-info h1 {
   font-family: "Playfair Display";
