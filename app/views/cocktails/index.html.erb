@@ -50,9 +50,12 @@
 
 
 
+
+<% @cocktails.each do |cocktail| %>
 <div class="project">
 
   <div class="project__card">
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
 
     <a href="" class="project__image"><img src="https://d32miag6ta013h.cloudfront.net/master_cocktails/1348/en-ca/small/525x525_roman-cosmo-martini-cocktail.jpg" width=600 height=400 alt=""></a>
 
@@ -67,26 +70,17 @@
   </div>
 
 </div>
+<% end %>
 
 
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>All cocktails</h1>
-      <ul class="list-group">
 
-        <% @cocktails.each do |cocktail| %>
-          <li class="list-group-item">
-            <%= cl_image_tag("cocktail", width: 300, height: 200, crop: :fill) %>
-            <%= link_to cocktail.name, cocktail_path(cocktail) %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-</div>
+
+
+
+
+
 <script src="tilt.jquery.js"></script>
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
