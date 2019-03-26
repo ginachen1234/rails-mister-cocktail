@@ -1,5 +1,6 @@
 
 <html>
+
 <head>
   <link rel="stylesheet" href="tiles.scss">
 </head>
@@ -8,7 +9,21 @@
 <header>
       <div class="navbar">
         <ul class="nav">
+          <li class="item">
+            <a href="#">Home</a>
+          </li>
 
+          <li class="item">
+            <a href="#">Blog</a>
+          </li>
+
+          <li class="item">
+            <a href="#">About</a>
+          </li>
+
+          <li class="item">
+            <a href="#">Contact</a>
+          </li>
         </ul>
 
         <div class="logo">
@@ -24,29 +39,7 @@
   <%= video_tag "People Partying At The Beach.mp4", autoplay: "autoplay", id: "video", muted: true, width: "100%", loop: "true", :class => "video"%>
   </div>
 
-
   <div class="header-container">
-    <div class = header-content>
-    <li class="item">
-          <a class="link link--kukuri" href="#" data-letters="Kukuri">Home</a>
-
-          </li>
-
-          <li class="item">
-            <a class="link link--kukuri" href="#" data-letters="Kukuri">Blog</a>
-
-          </li>
-
-          <li class="item">
-            <a class="link link--kukuri" href="#" data-letters="Kukuri">About</a>
-
-          </li>
-
-          <li class="item">
-            <a class="link link--kukuri" href="#" data-letters="Kukuri">Contact</a>
-
-          </li>
-          </div>
 
     <h1 class = title><b>Best bar in London</b></h1>
     <p>Search for your favourite cocktail</p>
@@ -55,40 +48,45 @@
   </div>
 
 
-
-
-
+<!--
+  Please note: this code is in no way ready to be used as is in production on your website. It will need to be adapted to be cross browser compliant & accessible. I just wanted to share how one might go about this effect with CSS & JS and no other dependencies
+-->
 <% @cocktails.each do |cocktail| %>
-<div class="project">
 
-  <div class="project__card">
-
-
-    <a href="" class="project__image"><img src="https://d32miag6ta013h.cloudfront.net/master_cocktails/1348/en-ca/small/525x525_roman-cosmo-martini-cocktail.jpg" width=600 height=400 alt=""></a>
-
-    <div class="project__detail">
-
-      <h2 class="project__title"><a href="#"> <%= link_to cocktail.name, cocktail_path(cocktail) %></a></h2>
-
-      <small class="project__category"><a href="#">Photography</a></small>
-
+  <div class="card-column column-0">
+    <div class="card card-color-0">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg" />
+      <h1>Hey now, you're an allstar</h1>
     </div>
-
+    <div class="card card-color-2">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg" />
+      <h1>Hey now, you're a rock star</h1>
+    </div>
+  </div>
+  <div class="card-column column-1">
+    <div class="card card-color-1">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
+      <h1>Get your game on, go play</h1>
+    </div>
+    <div class="card card-color-3">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
+      <h1>Get the show on, get paid</h1>
+    </div>
   </div>
 
+
+<div id="cover" class="cover"></div>
+
+<div id="open-content" class="open-content">
+  <a href="#" id="close-content" class="close-content"><span class="x-1"></span><span class="x-2"></span></a>
+  <img id="open-content-image" src="" />
+  <div class="text" id="open-content-text">
+  </div>
 </div>
 <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
 
 </html>
