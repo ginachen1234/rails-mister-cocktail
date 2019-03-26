@@ -1,6 +1,6 @@
 {
   "name": "rails-mister-cocktail",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@rails/webpacker": "3.5",
     "bootstrap": "^4.3.1",
