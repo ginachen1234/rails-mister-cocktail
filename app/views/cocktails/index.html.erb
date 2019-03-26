@@ -26,31 +26,31 @@
           </li>
         </ul>
 
-        <div class="logo">
-          <img src="#">
-        </div>
+
       </div>
     </header>
 
 
 
-<div class="gradiant"></div>
-  <div class="video">
-  <%= video_tag "People Partying At The Beach.mp4", autoplay: "autoplay", id: "video", muted: true, width: "100%", loop: "true", :class => "video"%>
-  </div>
-
-  <div class="header-container">
-
-    <h1 class = title><b>Best bar in London</b></h1>
-    <p>Search for your favourite cocktail</p>
-    <div class="new-search">
+<div id="loader" style="margin-top: 1%">
+    <div id="lemon"></div>
+    <div id="straw"></div>
+    <div id="glass">
+        <div id="cubes">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="drink"></div>
+        <span id="counter"></span>
     </div>
-  </div>
+    <div id="coaster"></div>
+
+<footer>Please wait while<br>we fill up your glass...</footer>
+</div>
 
 
-<!--
-  Please note: this code is in no way ready to be used as is in production on your website. It will need to be adapted to be cross browser compliant & accessible. I just wanted to share how one might go about this effect with CSS & JS and no other dependencies
--->
+<div class = "cocktails-container" style = "margin-top: 62%;">
 <% @cocktails.each do |cocktail| %>
 
   <div class="card-column column-0">
@@ -88,5 +88,16 @@
   </div>
 </div>
 <% end %>
+</div>
 
+
+
+
+
+
+
+</body>
 </html>
+<!--
+  Please note: this code is in no way ready to be used as is in production on your website. It will need to be adapted to be cross browser compliant & accessible. I just wanted to share how one might go about this effect with CSS & JS and no other dependencies
+-->
