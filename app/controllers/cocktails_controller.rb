@@ -1,23 +1,11 @@
 
 class CocktailsController < ApplicationController
   def index
-    @cocktail = Cocktail.new
-    @query = params['query']
-    params['query'].nil? ? @cocktails = Cocktail.all : @cocktails = Cocktail.where(
-      Cocktail.arel_table[:name]
-      .lower
-      .matches("%#{@query.downcase}%")
-      )
-    @total = Cocktail.all.length
-    @search_msg = ""
-    unless @query.nil?
-      @search_msg = "You searched for #{@query}. We found #{@cocktails.length} flats out of #{@total}"
-    end
+    @cocktails = Cocktail.all
   end
 
   def show
     @cocktail = Cocktail.find(params[:id])
-    @dose = Dose.new
   end
 
   def new
