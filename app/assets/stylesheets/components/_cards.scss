@@ -65,7 +65,7 @@ h1+p, p+p {
       transition:
         0.6s $hoverEasing,
         box-shadow 2s $hoverEasing;
-      box-shadow:
+          box-shadow:
         rgba(white, 0.2) 0 0 40px 5px,
         rgba(white, 1) 0 0 0 1px,
         rgba(black, 0.66) 0 30px 60px 0,
@@ -148,3 +148,55 @@ h1+p, p+p {
   font-weight: 700;
   text-shadow: rgba(black, 0.5) 0 10px 10px;
 }
+
+
+
+.cards-cocktails {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+
+
+
