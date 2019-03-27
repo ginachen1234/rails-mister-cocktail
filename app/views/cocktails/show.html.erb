@@ -1,11 +1,38 @@
-<div class="container">
+<div class = "container-cocktail-show" style = "display: flex">
+
+
+<div class="wrapper">
+ <div class="cocktail">
+   <div class="liquid"></div>
+   <div class="ice-cubes">
+     <div class="ice-cube ice-cube-1"></div>
+     <div class="ice-cube ice-cube-2"></div>
+     <div class="ice-cube ice-cube-3"></div>
+   </div>
+   <div class="lemon-slice"></div>
+   <div class="leaves">
+     <div class="leave leave-1"></div>
+     <div class="leave leave-2"></div>
+     <div class="leave leave-3"></div>
+   </div>
+   <div class="straw"></div>
+   <div class="straw-surface"></div>
+   <div class="shadow"></div>
+  </div>
+</div>
+
+
+
+<div class = container-cocktail-review>
+<div class="container ">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12" style = "margin-left: 31%;">
       <h1><%= @cocktail.name %></h1>
       <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
       <%= link_to "Back to all cocktails", root_path %>
     </div>
   </div>
+  <div class = "container-review" style = "margin-left: 31%;">
   <div class="row">
     <div class="col-sm-12 col-md-6">
       <h3>Recipe</h3>
@@ -31,12 +58,16 @@
       </table>
     </div>
 
+
+
+
+
   </div>
   <div class="row">
     <div class="col-xs-12">
       <h3>Reviews</h3>
       <% if @cocktail.reviews.empty? %>
-       <p>Be the first to let a review</p>
+       <p>Be the first to add a review</p>
       <% else %>
         <ul class="list-group">
           <% @cocktail.reviews.each do |review| %>
@@ -60,4 +91,8 @@
       <%= link_to "Add a new review", new_cocktail_review_path(@cocktail) %>
     </div>
   </div>
+</div>
+</div>
+
+</div>
 </div>
