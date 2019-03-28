@@ -30,6 +30,8 @@
       <h1><%= @cocktail.name %></h1>
       <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
       <%= link_to "Back to all cocktails", root_path %>
+      <%= link_to 'Delete cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }%>
+      <%= link_to 'Edit cocktail', edit_cocktail_path(@cocktail), method: :get%>
     </div>
   </div>
   <div class = "container-review" style = "margin-left: 31%; border: 2px solid rgba(255,255,255,1); background-color: #97d8f4">

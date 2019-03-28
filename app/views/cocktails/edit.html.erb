@@ -1,3 +1,38 @@
+
+<div class = "cocktail-edit-container" style = "margin-top: 16%">
+
+<div class="container">
+  <div class="table">
+    <div class="glassHead">
+      <div class="strawContainer">
+        <div class="straw">
+        </div>
+        <div class="lemon">
+        </div>
+        <div class="ice">
+        </div>
+        <div class="ice ice2">
+        </div>
+        <div class="ice ice3">
+        </div>
+      </div>
+    </div>
+    <div class="liquid2">
+    </div>
+    <div class="liquid">
+    </div>
+    <div class="glassBar">
+    </div>
+    <div class="glassFoot">
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
 <div class="form-page pt-3">
   <div class="form-div container pt-3">
     <h1>Edit Cocktail</h1>
@@ -6,12 +41,15 @@
 
       <div class="form-inputs">
         <%= f.input :name %>
-        <%= f.input :image %>
+        <%= f.input :photo %>
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, class: "btn btn-light" %> <%= link_to 'Back', cocktails_path, class: "btn btn-dark" %>
+        <%= f.button :submit, class: "btn btn-light" %>
+
+        <%= link_to 'Back', cocktails_path, class: "btn btn-dark" %>
       </div>
     <% end %>
   </div>
+</div>
 </div>
