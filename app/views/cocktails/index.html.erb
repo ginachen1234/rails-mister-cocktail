@@ -10,30 +10,22 @@
       <div class="navbar">
         <ul class="nav">
           <li class="item">
-            <a href="#">Home</a>
+            <a href=> <%= link_to "Home", root_path  %></a>
           </li>
 
           <li class="item">
-            <a href="#">Blog</a>
+            <a href=><%= link_to "Add a new cocktail",  new_cocktail_path%></a>
           </li>
 
-          <li class="item">
-            <a href="#">About</a>
-          </li>
-
-          <li class="item">
-            <a href="#">Contact</a>
-          </li>
+         <li class="item" style = "width:20px;">
+         <i class="fas fa-cocktail"></i>
+        </li>
         </ul>
 
 
       </div>
     </header>
-<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
 
-<div class="button" style = "font-size: 13px">
-  <p><%= link_to "Add a new cocktail",  new_cocktail_path%></p>
-</div>
 
 
 <div id="loader" style="margin-top: 1%">
@@ -50,7 +42,7 @@
     </div>
     <div id="coaster"></div>
 
-<footer>Please wait while<br>we fill up your glass...</footer>
+<div><b>Please wait while<br>we fill up your glass...</b></div>
 </div>
 
 
@@ -88,12 +80,15 @@
 
 
 
+
+
+
+
+
+
+
 </body>
 </html>
 
 
 
-
-<!--
-  Please note: this code is in no way ready to be used as is in production on your website. It will need to be adapted to be cross browser compliant & accessible. I just wanted to share how one might go about this effect with CSS & JS and no other dependencies
--->
