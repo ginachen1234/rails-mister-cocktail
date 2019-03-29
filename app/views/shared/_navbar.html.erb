@@ -2,20 +2,16 @@
       <div class="navbar">
         <ul class="nav">
           <li class="item">
-            <a href="#">Home</a>
+            <a href=> <%= link_to "Home", root_path  %></a>
           </li>
 
           <li class="item">
-            <a href="#">Blog</a>
+            <a href=><%= link_to "Add a new cocktail",  new_cocktail_path%></a>
           </li>
 
-          <li class="item">
-            <a href="#">About</a>
-          </li>
-
-          <li class="item">
-            <a href="#">Contact</a>
-          </li>
+         <li class="item" style = "width:25px;">
+         <i class="fas fa-cocktail"></i>
+        </li>
         </ul>
 
 
