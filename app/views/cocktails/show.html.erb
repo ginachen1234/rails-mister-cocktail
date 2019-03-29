@@ -1,6 +1,5 @@
-<div class = "container-cocktail-show" style = "display: flex">
-
-
+<div class = "container-cocktail-show" style = "display: flex; margin-bottom: 100px;">
+<div class = "picture" style = "margin-top: 20px;">
 <div class="wrapper">
  <div class="cocktail">
    <div class="liquid"></div>
@@ -20,6 +19,7 @@
    <div class="shadow"></div>
   </div>
 </div>
+</div>
 
 
 
@@ -27,73 +27,22 @@
 <div class="container ">
   <div class="row">
     <div class="col-xs-12" style = "margin-left: 31%;">
-      <h1><%= @cocktail.name %></h1>
-      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-      <%= link_to "Back to all cocktails", root_path %>
-      <%= link_to 'Delete cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }%>
-      <%= link_to 'Edit cocktail', edit_cocktail_path(@cocktail), method: :get%>
-    </div>
-  </div>
-  <div class = "container-review" style = "margin-left: 31%; border: 2px solid rgba(255,255,255,1); background-color: #97d8f4">
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <h3>Recipe</h3>
-      <table class="table table-bordered">
-        <tbody>
-          <thead>
-            <th>Ingredient</th>
-            <th>Description</th>
-            <th>Action</th>
-          </thead>
-          <% @cocktail.doses.each do |dose| %>
-            <tr>
-              <td><%= dose.ingredient.name %></td>
-              <td><%= dose.description %></td>
-              <td>
-                <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fa fa-trash destroy_dose"></i>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
+      <h1> <%= @cocktail.name %></h1>
+      <%= cl_image_tag @cocktail.photo, height: 250, width: 350, crop: :fill %>
+      <div class = "btn" style = "display: flex; margin-top: 95%;">
 
+      <div class = "btn-new"> <%= link_to "Back to all cocktails", root_path %></div>
+      <div class = "btn-new"> <%= link_to 'Delete cocktail', cocktail_path(@cocktail),  method: :delete, data: { confirm: "Are you sure?" }%></div>
+      <div class = "btn-new"> <%= link_to 'Edit cocktail', edit_cocktail_path(@cocktail), method: :get%> </div>
 
-
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Reviews</h3>
-      <div class="col-xs-12">
-      <%= link_to "Add a new review", new_cocktail_review_path(@cocktail) %>
     </div>
-      <% if @cocktail.reviews.empty? %>
-       <p>Be the first to add a review</p>
-      <% else %>
-        <ul class="list-group">
-          <% @cocktail.reviews.each do |review| %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span class="badge badge-primary badge-pill">
-                <% counter = 0 %>
-                <% 5.times do %>
-                  <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
-                  <% counter += 1 %>
-                <% end %>
-              </span>
-              <%= review.content %>
-            </li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
+   </div>
   </div>
-  <div class="row">
+  </div>
+ </div>
 
-  </div>
-</div>
 </div>
 
-</div>
-</div>
+
+
+
