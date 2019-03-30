@@ -8,6 +8,7 @@ border-radius:10px;
 margin-left: 35%;
 box-shadow: 0 0 15px rgba(0, 0, 0, 0.91);
 border-radius:10px;
+
 }
 
 .container {
@@ -283,4 +284,9 @@ body,
   from { transform: translate(146px, -178px) rotate(45deg) }
   50%  { transform: translate(146px, -178px) rotate(60deg) }
   to   { transform: translate(146px, -178px) rotate(45deg) }
+}
+.container-cocktail-show {
+  display: flex;
+  margin-bottom: 100px;
+  margin-left: 100px;
 }
